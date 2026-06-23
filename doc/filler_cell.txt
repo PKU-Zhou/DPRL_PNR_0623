@@ -1,0 +1,34 @@
+innovus > get_db [get_db lib_cells -if {.name == lib_ff*\/DCAP* && .name == *HVT*}] .name
+
+lib_ff/tcbn22ullbwp7t30p140hvtffg0p88vm40c_ccs/DCAP64BWP7T30P140HVT 
+lib_ff/tcbn22ullbwp7t30p140hvtffg0p88vm40c_ccs/DCAP32BWP7T30P140HVT 
+lib_ff/tcbn22ullbwp7t30p140hvtffg0p88vm40c_ccs/DCAP16BWP7T30P140HVT 
+lib_ff/tcbn22ullbwp7t30p140hvtffg0p88vm40c_ccs/DCAP8BWP7T30P140HVT
+lib_ff/tcbn22ullbwp7t30p140hvtffg0p88vm40c_ccs/DCAP4BWP7T30P140HVT 
+
+innovus > get_db [get_db lib_cells -if {.name == lib_ff*\/FILL* && .name == *HVT*}] .name
+
+lib_ff/tcbn22ullbwp7t30p140hvtffg0p88vm40c_ccs/FILL64BWP7T30P140HVT 
+lib_ff/tcbn22ullbwp7t30p140hvtffg0p88vm40c_ccs/FILL32BWP7T30P140HVT 
+lib_ff/tcbn22ullbwp7t30p140hvtffg0p88vm40c_ccs/FILL16BWP7T30P140HVT 
+lib_ff/tcbn22ullbwp7t30p140hvtffg0p88vm40c_ccs/FILL8BWP7T30P140HVT
+lib_ff/tcbn22ullbwp7t30p140hvtffg0p88vm40c_ccs/FILL4BWP7T30P140HVT 
+lib_ff/tcbn22ullbwp7t30p140hvtffg0p88vm40c_ccs/FILL3BWP7T30P140HVT 
+lib_ff/tcbn22ullbwp7t30p140hvtffg0p88vm40c_ccs/FILL2BWP7T30P140HVT
+
+innovus > get_db [get_db lib_cells -if {.name == lib_ff*\/GFILL* && .name == *HVT*}] .name
+
+lib_ff/tcbn22ullbwp7t30p140hvtffg0p88vm40c_ccs/GFILL14BWP7T30P140HVT 
+lib_ff/tcbn22ullbwp7t30p140hvtffg0p88vm40c_ccs/GFILL13BWP7T30P140HVT 
+lib_ff/tcbn22ullbwp7t30p140hvtffg0p88vm40c_ccs/GFILL12BWP7T30P140HVT 
+lib_ff/tcbn22ullbwp7t30p140hvtffg0p88vm40c_ccs/GFILL11BWP7T30P140HVT 
+lib_ff/tcbn22ullbwp7t30p140hvtffg0p88vm40c_ccs/GFILL10BWP7T30P140HVT 
+lib_ff/tcbn22ullbwp7t30p140hvtffg0p88vm40c_ccs/GFILL9BWP7T30P140HVT 
+lib_ff/tcbn22ullbwp7t30p140hvtffg0p88vm40c_ccs/GFILL8BWP7T30P140HVT 
+lib_ff/tcbn22ullbwp7t30p140hvtffg0p88vm40c_ccs/GFILL7BWP7T30P140HVT 
+lib_ff/tcbn22ullbwp7t30p140hvtffg0p88vm40c_ccs/GFILL6BWP7T30P140HVT 
+lib_ff/tcbn22ullbwp7t30p140hvtffg0p88vm40c_ccs/GFILL5BWP7T30P140HVT 
+lib_ff/tcbn22ullbwp7t30p140hvtffg0p88vm40c_ccs/GFILL4BWP7T30P140HVT 
+lib_ff/tcbn22ullbwp7t30p140hvtffg0p88vm40c_ccs/GFILL3BWP7T30P140HVT 
+lib_ff/tcbn22ullbwp7t30p140hvtffg0p88vm40c_ccs/GFILL2BWP7T30P140HVT 
+lib_ff/tcbn22ullbwp7t30p140hvtffg0p88vm40c_ccs/GFILLBWP7T30P140HVT

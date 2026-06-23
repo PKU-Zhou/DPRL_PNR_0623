@@ -1,0 +1,22 @@
+# 忽略所有文件（含子目录）
+**/*
+
+# 保留目录结构，便于 Git 遍历并提交 .gitkeep
+!**/
+!**/.gitkeep
+
+# 根目录必要文件
+!.gitignore
+!Makefile
+
+# scripts 目录完整纳入版本控制
+!scripts/
+!scripts/**
+# doc 目录完整纳入版本控制
+!doc/
+!doc/**
+
+
+# EDA 工具本地缓存
+.cadence/
+**/.cadence/

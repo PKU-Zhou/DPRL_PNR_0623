@@ -9,8 +9,10 @@ puts "--> 3.3 Place Incremental Start."
 # 进行增量优化
 place_opt_design -incremental -out_dir ../report/postPlace_incr -prefix ${TopName}_postPlace_incr
 
-# 检查timing
+# 检查timing并提取报告
 timeDesign -preCTS -outDir ../report/postPlace_incr -prefix ${TopName}_postPlace_incr
+exec ../scripts/General/extract_report.csh ../report/postPlace_incr
+
 # 保存设计
 saveDesign ../backup/${TopName}_postPlace_incr.enc
 

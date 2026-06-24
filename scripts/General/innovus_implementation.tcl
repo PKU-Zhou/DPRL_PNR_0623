@@ -6,7 +6,7 @@
 
 #----------Step 0: Initialize----------#
 # 如果用makefile启动的话，已经自动执行了，可以跳过
-source ../scripts/Step0_Init/global_config.tcl
+source ../scripts/Step0_Init/init_config.tcl
 source ../scripts/Step0_Init/mmmc.tcl
 
 #----------Step 1: FloorPlan-----------#
@@ -41,6 +41,9 @@ source ../scripts/Step3_Placement/place_incr.tcl
 
 
 #----------Step 4: CTS-----------------#
+source ../scripts/Step4_Clock_Tree_Syn/cts.tcl
+
+source ../scripts/Step4_Clock_Tree_Syn/cts_opt.tcl
 
 #----------Step 5: Route---------------#
 

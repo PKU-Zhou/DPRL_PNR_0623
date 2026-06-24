@@ -1,4 +1,3 @@
-TODO
 
 
 setNanoRouteMode	\
@@ -13,7 +12,6 @@ setNanoRouteMode	\
 	# 预备Via的绕线空间
 
 
-set TopName dcim_wrapper
 # set the native RC extraction mode
 # engine:               possible value: preRoute | postRoute, default: preRoute
 # effortLevel:          possible value: low | medium | high | signoff, default: low
@@ -33,9 +31,14 @@ setAnalysisMode -cppr both
 
 route_opt_design -setup -hold
 
-timeDesign -postRoute -outDir ./report/postRoute/ -prefix postRoute
-timeDesign -postRoute -hold -outDir ./report/postRoute/hold/ -prefix postRoute
-saveDesign ./save/route_opt_design.enc
+
+
+timeDesign -postRoute -outDir       ../report/postRoute/ -prefix ${TopName}_postRoute
+timeDesign -postRoute -hold -outDir ../report/postRoute/ -prefix ${TopName}_postRoute_hold
+exec ../scripts/General/extract_report.csh ../report/postRoute
+
+
+saveDesign ../backup/${TopName}_postRoute.enc
 
 # route_opt_design 应该是自带-hold -setup优化的，如果使用了routeDesign才需要手动加优化
 # optDesign -postRoute -setup -hold	-outDir ./report/optDesign_postRoute1_setup_hold/	-prefix optDesign_postRoute1_setup_hold

@@ -46,5 +46,8 @@ source ../scripts/Step4_Clock_Tree_Syn/cts.tcl
 source ../scripts/Step4_Clock_Tree_Syn/cts_opt.tcl
 
 #----------Step 5: Route---------------#
+source ../scripts/Step5_Routing/route.tcl  
+source ../scripts/Step5_Routing/fixDrc.tcl
+
 
 #----------Step 6: Signoff-------------#

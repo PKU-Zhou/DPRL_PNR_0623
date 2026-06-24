@@ -8,8 +8,9 @@ export  TOP
 #     make innovus TOP=mxu_top
 innovus:
 	cd logs && innovus \
-	-execute "source ../scripts/Step0_Init/global_config.tcl; \
+	-execute "source ../scripts/Step0_Init/init_config.tcl; \
 			  init_design; \
+			  source ../scripts/General/global_config.tcl; \
 			  win" \
 			  -log ${TOP}.log -overwrite
 
@@ -18,13 +19,16 @@ innovus:
 # 注意：必须是合法的STAGE，且备份文件存在
 # Powerplan
 restore:
-	grep '^set ' ./scripts/Step1_FloorPlan/floorplan.tcl       > ./backup/macro_alias.tcl
+	grep '^set ' ./scripts/Step0_Init/init_config.tcl       >  ./backup/macro_alias.tcl
+	grep '^set ' ./scripts/Step0_Init/mmmc.tcl                >> ./backup/macro_alias.tcl
+	grep '^set ' ./scripts/Step1_FloorPlan/floorplan.tcl      >> ./backup/macro_alias.tcl
 	grep '^set ' ./scripts/Step1_FloorPlan/macro_preplace.tcl >> ./backup/macro_alias.tcl
 	cd logs && \
 	innovus \
-	-execute "source ../scripts/Step0_Init/global_config.tcl; \
+	-execute "source ../scripts/Step0_Init/init_config.tcl; \
 			  source ../backup/${TOP}_post${STAGE}.enc; \
 	          source ../backup/macro_alias.tcl; \
+			  source ../scripts/General/global_config.tcl; \
 	          win" \
 			  -log ${TOP}.log -overwrite
 

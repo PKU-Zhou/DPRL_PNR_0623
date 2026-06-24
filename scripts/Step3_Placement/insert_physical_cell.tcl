@@ -9,6 +9,7 @@ setPlaceMode	\
 	-place_global_timing_effort medium	\
 	-place_design_refine_macro	false	\
 	-place_design_refine_place	true	\
+    -place_detail_use_check_drc true \
 	-place_detail_legalization_inst_gap 2 \
 	-place_global_cong_effort high
 

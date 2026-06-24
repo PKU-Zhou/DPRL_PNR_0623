@@ -49,18 +49,6 @@ set init_top_cell ${TopName}
 set init_mmmc_file ${MMMCFile}
 set init_pwr_net {VDD_MXU}
 set init_gnd_net {VSS_MXU}
-setMultiCpuUsage -localCpu 64
 
-
-
-
-setDesignMode   -process            22 \
-                -congEffort         auto \
-                -earlyClockFlow     false \
-                -expressRoute       false \
-                -flowEffort         standard \
-                -powerEffort        low \
-                -bottomRoutingLayer M2 \
-                -topRoutingLayer    M7
 
 puts "--> 0.1 Init Done."

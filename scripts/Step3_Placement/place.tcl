@@ -5,7 +5,7 @@
 puts "--> 3.2 Place Start."
 
 
-deleteTieHiLo
+deleteTieHiLo -prefix "TIE"
 
 
 place_opt_design

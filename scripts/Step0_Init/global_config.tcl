@@ -49,10 +49,10 @@ set init_top_cell ${TopName}
 set init_mmmc_file ${MMMCFile}
 set init_pwr_net {VDD_MXU}
 set init_gnd_net {VSS_MXU}
-setMultiCpuUsage -localCpu 64  -keepLicense true
+setMultiCpuUsage -localCpu 64
 
 
-init_design
+
 
 setDesignMode   -process            22 \
                 -congEffort         auto \

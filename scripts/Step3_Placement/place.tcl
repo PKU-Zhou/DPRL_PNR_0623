@@ -17,8 +17,10 @@ addTieHiLo
 
 
 
-# 检查timing
+# 检查timing并提取报告
 timeDesign -preCTS -outDir ../report/postPlace -prefix ${TopName}_postPlace
+exec ../scripts/General/extract_report.csh ../report/postPlace
+
 
 # 保存设计
 saveDesign ../backup/${TopName}_postPlace.enc

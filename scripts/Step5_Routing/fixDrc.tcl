@@ -1,38 +1,39 @@
-TODO
+# 修复DRC的脚本
+
+# 修复DRC 不是一个 用脚本一键运行就可以完成的步骤，
+# 极其依赖人的交互式操作
+# 该脚本只提供常见命令
+# 不要直接运行！！！
+# 不要直接运行！！！
+# 不要直接运行！！！
 
 
-# 1. (可选) 清除之前的 DRC 标记，保持视图干净
-clearDrc
 
-# 2. 配置 NanoRoute 的 ECO 模式
-# 开启 ECO 绕线模式
-setNanoRouteMode -route_with_eco true
 
-# 开启深度搜索与修复，死磕顽固 DRC
-setNanoRouteMode -route_detail_search_and_repair true
+# 开始之前，先看一眼DRC报告
+verify_drc -limit 99999 -report ./report/Route/verify_drc.rpt
 
-# 如果你想同时顺手修一下天线效应违例，可以打开这个 (看你的需求)
-# setNanoRouteMode -route_antenna_diode_insertion true
 
-# 关闭时序驱动绕线设置，专注于修复drc
-setNanoRouteMode -route_with_timing_driven false
-setNanoRouteMode -route_with_si_driven false
 # 这个阶段时序以PT为准 不看Innovus的报告了
 
-# 删除现有的RouteBlk
-deleteRouteBlk -all
-# 一开始就不用加RouteBlk
+# Step1. 工具全局自动修drc
+# 执行 ECO 绕线 (更现代的专有命令，等同于配置好的 globalDetailRoute)
+ecoRoute -fix_drc
 
-# 3. 执行 ECO 绕线 (更现代的专有命令，等同于配置好的 globalDetailRoute)
+# Step2. 手动删除DRC报错net，再ecoRoute，此时不能加-fix_drc
 ecoRoute
 
-timeDesign -postRoute -outDir ./report/fixDrc2/ -prefix fixDrc2
-timeDesign -postRoute -hold -outDir ./report/fixDrc2/hold -prefix fixDrc2_hold
+# Step3. 手动删除DRC报错net，手动增加RouteBlk，再ecoRoute，此时不能加-fix_drc
+# 删除之前加上去的RouteBlk
+deleteRouteBlk -all
+ecoRoute
 
-# 4. 重新验证 DRC
+# 重新验证 DRC
 clearDrc
-verify_drc -limit 99999 -report ./report/fixDrc2/verify_drc.rpt
-verifyGeometry -report ./report/fixDrc2/verify_geometry.rpt
+verify_drc -limit 99999 -report ./report/Route/verify_drc.rpt
+# verifyGeometry ?
+# verifyGeometry -report ./report/Route/verify_geometry.rpt
 
 
-saveDesign ./save/fixDrc2.enc
+# 保存设计
+saveDesign ../backup/${TopName}_fixDrc.enc

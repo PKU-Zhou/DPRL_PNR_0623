@@ -19,9 +19,7 @@ innovus:
 # 注意：必须是合法的STAGE，且备份文件存在
 # Powerplan
 restore:
-	grep '^set ' ./scripts/Step0_Init/init_config.tcl       >  ./backup/macro_alias.tcl
-	grep '^set ' ./scripts/Step0_Init/mmmc.tcl                >> ./backup/macro_alias.tcl
-	grep '^set ' ./scripts/Step1_FloorPlan/floorplan.tcl      >> ./backup/macro_alias.tcl
+	grep '^set ' ./scripts/Step1_FloorPlan/floorplan.tcl      > ./backup/macro_alias.tcl
 	grep '^set ' ./scripts/Step1_FloorPlan/macro_preplace.tcl >> ./backup/macro_alias.tcl
 	cd logs && \
 	innovus \

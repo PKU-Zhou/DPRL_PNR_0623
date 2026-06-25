@@ -21,9 +21,12 @@ write_lef_abstract  -5.8 \
 # type_view:            use the late delay from the specified analysis view to populate the SDF typ slot
 # max_view:             use the late delay from the specified analysis view to populate the SDF max slot
 # recompute_delay_calc: instruct the software to recompute any necessary data required for a complete SDF file before exporting 
-write_sdf   -view func_tt_0p80v_25c \
+write_sdf   -min_view func_tt_0p80v_25c \
+            -typ_view func_tt_0p80v_25c \
+            -max_view func_tt_0p80v_25c \
             -recompute_delay_calc \
             ../backup/signoff/${TopName}_postSignoff_tt_0p80v_25c.sdf
+
 # -min_view func_ff_0p88v_125c
 # -typ_view func_tt_0p80v_25c
 # -max_view func_ss_0p72v_m40c

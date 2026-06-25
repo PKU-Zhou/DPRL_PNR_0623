@@ -21,11 +21,11 @@ write_lef_abstract  -5.8 \
 # type_view:            use the late delay from the specified analysis view to populate the SDF typ slot
 # max_view:             use the late delay from the specified analysis view to populate the SDF max slot
 # recompute_delay_calc: instruct the software to recompute any necessary data required for a complete SDF file before exporting 
-write_sdf   -min_view func_tt_0p80v_25c \
-            -typ_view func_tt_0p80v_25c \
-            -max_view func_tt_0p80v_25c \
+write_sdf   -min_view func_tt_typ \
+            -typ_view func_tt_typ \
+            -max_view func_tt_typ \
             -recompute_delay_calc \
-            ../backup/signoff/${TopName}_postSignoff_tt_0p80v_25c.sdf
+            ../backup/signoff/${TopName}_postSignoff_func_tt_typ.sdf
 
 # -min_view func_ff_0p88v_125c
 # -typ_view func_tt_0p80v_25c
@@ -33,8 +33,8 @@ write_sdf   -min_view func_tt_0p80v_25c \
 
 # build a Liberty (.lib) format model for the top cell, which is the timing model equivalent of the original design
 # view: specify the current active view
-do_extract_model    -view func_tt_0p80v_25c \
-                    ../backup/signoff/${TopName}_postSignoff_tt_0p80v_25c.lib 
+do_extract_model    -view func_tt_typ \
+                    ../backup/signoff/${TopName}_postSignoff_func_tt_typ.lib 
 
 set redundant_files [glob -nocomplain "../backup/signoff/model.asrt*"]
 foreach redundant_file $redundant_files {
@@ -70,4 +70,4 @@ saveNetlist -excludeCellInst    ${lvs_exclude_cells} \
 # generate detailed timing report
 timeDesign -outDir ../report/postSignoff -postRoute 
 timeDesign -outDir ../report/postSignoff -postRoute -hold 
-exec ../scripts/extract_report.csh ../report/postSignoff
+exec ../scripts/General/extract_report.csh ../report/postSignoff

@@ -8,7 +8,8 @@ export  TOP
 #     make innovus TOP=mxu_top
 innovus:
 	cd logs && innovus \
-	-execute "source ../scripts/Step0_Init/init_config.tcl; \
+	-execute "setMultiCpuUsage -localCpu 64 ; \
+	          source ../scripts/Step0_Init/init_config.tcl; \
 			  init_design; \
 			  source ../scripts/General/global_config.tcl; \
 			  win" \
@@ -23,7 +24,8 @@ restore:
 	grep '^set ' ./scripts/Step1_FloorPlan/macro_preplace.tcl >> ./backup/macro_alias.tcl
 	cd logs && \
 	innovus \
-	-execute "source ../scripts/Step0_Init/init_config.tcl; \
+	-execute "setMultiCpuUsage -localCpu 64 ; \
+	          source ../scripts/Step0_Init/init_config.tcl; \
 			  source ../backup/${TOP}_post${STAGE}.enc; \
 	          source ../backup/macro_alias.tcl; \
 			  source ../scripts/General/global_config.tcl; \

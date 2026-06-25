@@ -65,4 +65,6 @@ source ../scripts/Step6_SIgnoff/PG_pin.tcl
 source ../scripts/Step6_SIgnoff/file_gen.tcl
 
 
+source ../scripts/Step6_SIgnoff/netlist2cdl.tcl
 
+saveDesign ../backup/${TopName}_postSignoff.enc

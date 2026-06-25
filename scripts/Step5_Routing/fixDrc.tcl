@@ -30,9 +30,7 @@ ecoRoute
 
 # 重新验证 DRC
 clearDrc
-verify_drc -limit 99999 -report ./report/Route/verify_drc.rpt
-# verifyGeometry ?
-# verifyGeometry -report ./report/Route/verify_geometry.rpt
+verify_drc -limit 99999 -report ../report/postRoute/verify_drc.rpt
 
 
 # 保存设计

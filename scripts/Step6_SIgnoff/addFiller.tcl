@@ -1,4 +1,4 @@
-TODO
+
 
 # TSMC 22nm TG 7T 30P Available Filler Cell:
 # DCAP64BWP7T30P140HVT DCAP32BWP7T30P140HVT DCAP16BWP7T30P140HVT DCAP8BWP7T30P140HVT DCAP4BWP7T30P140HVT 
@@ -16,5 +16,6 @@ set filler_cell [list \
 
 addFiller -cell ${filler_cell} -prefix "FILL"
 
-verify_drc -limit 999 -report ./report/addFiller/verify_drc.rpt
-saveDesign ./save/addFiller.enc
+verify_drc -limit 9999 -report ../report/postFiller/verify_drc.rpt
+saveDesign ../backup/${TopName}_postFiller.enc
+

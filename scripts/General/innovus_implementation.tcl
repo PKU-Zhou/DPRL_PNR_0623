@@ -60,3 +60,8 @@ source ../scripts/Step5_Routing/fixDrc.tcl
 
 
 #----------Step 6: Signoff-------------#
+source ../scripts/Step6_SIgnoff/addFiller.tcl
+source ../scripts/Step6_SIgnoff/PG_pin.tcl
+
+
+

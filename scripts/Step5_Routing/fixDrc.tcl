@@ -34,4 +34,4 @@ verify_drc -limit 99999 -report ../report/postRoute/verify_drc.rpt
 
 
 # 保存设计
-saveDesign ../backup/${TopName}_fixDrc.enc
+saveDesign ../backup/${TopName}_postFixDrc.enc

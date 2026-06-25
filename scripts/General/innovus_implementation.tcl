@@ -47,6 +47,15 @@ source ../scripts/Step4_Clock_Tree_Syn/cts_opt.tcl
 
 #----------Step 5: Route---------------#
 source ../scripts/Step5_Routing/route.tcl  
+
+# 如果timing和drv没什么问题，可以跳过这一步
+source ../scripts/Step5_Routing/optDesign_postRoute.tcl
+
+# 修DRC之前先配置好ECO模式
+source ../scripts/Step5_Routing/ecoRoute_config.tcl
+
+# 不要执行这个脚本！
+# 打开脚本查看命令，手动执行
 source ../scripts/Step5_Routing/fixDrc.tcl
 
 

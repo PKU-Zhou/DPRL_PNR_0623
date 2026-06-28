@@ -10,7 +10,7 @@
 # stripePin:        write out power and ground stripes on the top metal layer as power and ground pins
 write_lef_abstract  -5.8 \
                     -cutObsMinSpacing \
-                    -PGpinLayers        {M7} \
+                    -PGpinLayers        {M6 M7} \
                     -specifyTopLayer    M7 \
                     -stripePin \
                     ../backup/signoff/${TopName}_postSignoff.lef
@@ -46,8 +46,8 @@ foreach redundant_file $redundant_files {
 # merge:    specify a single file or a list of files to merge
 # mode:     identify the layers to write, possible value: ALL | FILLONLY | NOFILL | NOINSTANCES
 streamOut   -mapFile    ${streamOut_map} \
-            -merge      "${GdsFile}" \
-            -mode       ALL \
+//TODO:  之后重新merge          -merge      "${GdsFile}" \
+//TODO:            -mode       ALL \
             ../backup/signoff/${TopName}_postSignoff.gds2
 
 # write a netlist file of the design for LVS
@@ -61,6 +61,8 @@ saveNetlist -excludeCellInst    ${lvs_exclude_cells} \
             -flat \
             -phys \
             ../backup/signoff/${TopName}_flat_postSignoff.v
+
+# 不用flat
 
 saveNetlist -excludeCellInst    ${lvs_exclude_cells} \
             -excludeLeafCell \

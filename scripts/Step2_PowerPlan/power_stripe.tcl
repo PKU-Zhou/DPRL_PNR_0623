@@ -25,5 +25,6 @@ addStripe   -nets                               { VDD_MXU VSS_MXU } \
 			-padcore_ring_bottom_layer_limit    M1 \
 			-padcore_ring_top_layer_limit       M7
 
+#addStripe -create_pins 1 -extend_to design_boundary
 
 puts "--> 2.4 Add Power Stripe Done."

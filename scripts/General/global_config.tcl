@@ -11,3 +11,6 @@ setDesignMode   -process            22 \
                 -powerEffort        low \
                 -bottomRoutingLayer M2 \
                 -topRoutingLayer    M7
+
+
+source /home/EDAtools/mentor/Calibre2023/aoj_cal_2023.2_16.9/lib/cal_enc.tcl

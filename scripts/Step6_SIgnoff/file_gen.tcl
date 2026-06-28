@@ -48,6 +48,7 @@ foreach redundant_file $redundant_files {
 streamOut   -mapFile    ${streamOut_map} \
             -merge      "${GdsFile}" \
             -mode       ALL \
+            -unit       1000 \
             ../backup/signoff/${TopName}_postSignoff.gds2
 
 # write a netlist file of the design for LVS

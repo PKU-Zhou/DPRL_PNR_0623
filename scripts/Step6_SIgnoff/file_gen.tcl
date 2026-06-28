@@ -45,10 +45,16 @@ foreach redundant_file $redundant_files {
 # mapFile:  specify the file used for layer mapping
 # merge:    specify a single file or a list of files to merge
 # mode:     identify the layers to write, possible value: ALL | FILLONLY | NOFILL | NOINSTANCES
+# //TODO:  之后重新merge          
+# //TODO:  之后重新mode
+
+
 streamOut   -mapFile    ${streamOut_map} \
-//TODO:  之后重新merge          -merge      "${GdsFile}" \
-//TODO:            -mode       ALL \
+            -merge      "${GdsFile}" \
+            -mode       ALL \
+            -unit       1000 \
             ../backup/signoff/${TopName}_postSignoff.gds2
+
 
 # write a netlist file of the design for LVS
 # excludeCellInst:  exclude the instances of the specified cells from the netlist

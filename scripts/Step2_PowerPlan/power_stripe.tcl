@@ -27,6 +27,7 @@ addStripe   -nets                               { VDD_MXU VSS_MXU } \
 			-create_pins 1 \
 			-extend_to design_boundary
 
-#addStripe -create_pins 1 -extend_to design_boundary
+# 这里增加了 pin 相关的配置
+# 并延伸到了设计边界
 
 puts "--> 2.4 Add Power Stripe Done."

@@ -26,6 +26,7 @@ source ../scripts/Step2_PowerPlan/power_stripe.tcl
 # 如果sram bank之间的channel已经有了stripe，则这一步可以跳过
 source ../scripts/Step2_PowerPlan/power_stripe_ver_comple.tcl
 
+
 source ../scripts/Step2_PowerPlan/power_check.tcl
 
 saveDesign ../backup/${TopName}_postPowerplan.enc
@@ -44,6 +45,8 @@ source ../scripts/Step3_Placement/place_incr.tcl
 source ../scripts/Step4_Clock_Tree_Syn/cts.tcl
 
 #source ../scripts/Step4_Clock_Tree_Syn/cts_opt.tcl
+
+# 检查sram bank的clka和clkb的skew，要小于50ps
 source ../scripts/Step4_Clock_Tree_Syn/check_skew.tcl
 
 #----------Step 5: Route---------------#

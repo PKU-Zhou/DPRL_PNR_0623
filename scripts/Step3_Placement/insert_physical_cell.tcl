@@ -4,6 +4,9 @@
 
 puts "--> 3.1 Insert Physical Cell Start."
 
+# 删除之前摆上的endcap
+deleteInst ENDCAP*
+
 # 插入边缘保护单元
 setPlaceMode	\
 	-place_global_timing_effort medium	\
@@ -17,9 +20,10 @@ setPlaceMode	\
 set LEFT_ENDCAP "BOUNDARY_LEFTBWP7T30P140"
 set RIGHT_ENDCAP "BOUNDARY_RIGHTBWP7T30P140"
 # 5 site BOUNDARY 和 2 site FILL
-set TOP_ENDCAP "FILL2BWP7T30P140"
-set BOTTOM_ENDCAP "FILL2BWP7T30P140"
-setEndCapMode -rightEdge ${LEFT_ENDCAP} -leftEdge ${RIGHT_ENDCAP} -topEdge ${TOP_ENDCAP} -bottomEdge ${BOTTOM_ENDCAP} -prefix "ENDCAP"
+set TOP_ENDCAP "FILL2BWP7T30P140 FILL3BWP7T30P140"
+set BOTTOM_ENDCAP "FILL2BWP7T30P140 FILL3BWP7T30P140"
+
+setEndCapMode -rightEdge ${LEFT_ENDCAP} -leftEdge ${RIGHT_ENDCAP} -prefix "ENDCAP"
 
 addEndCap
 

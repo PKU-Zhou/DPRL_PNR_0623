@@ -19,6 +19,28 @@ source ../backup/cts/ccopt_cts_spec.tcl
 # get_db clock_trees .nets -u -if {.is_ideal  ==  true}
 
 set_ccopt_property update_io_latency true
+set_ccopt_property target_skew 0.1
+
+set_ccopt_property use_inverters true
+# 选择驱动为8以上的单元
+set_ccopt_property inverter_cells [ list        \
+    CKND8BWP7T30P140LVT        \
+    CKND12BWP7T30P140LVT        \
+    CKND16BWP7T30P140LVT        \
+]
+set_ccopt_property clone_clock_logic true
+# set_ccopt_property clone_clock_gates true
+# set_ccopt_property merge_clock_gates true
+set_ccopt_property merge_clock_logic true
+# 指定非默认布线规则
+add_ndr -name cts_w2s2 -width_multiplier {M5:M7 2} -spacing_multiplier {M5:M7 2}
+create_route_type -name TRUNK -top_preferred_layer M7 -bottom_preferred_layer M5 -preferred_routing_layer_effort medium -non_default_rule cts_w2s2
+create_route_type -name LEAF -top_preferred_layer M7 -bottom_preferred_layer M5 -preferred_routing_layer_effort medium
+set_ccopt_property route_type TRUNK -net_type trunk
+set_ccopt_property route_type LEAF -net_type leaf
+
+
+
 
 # insertion delay
 set memory_pin_name_list [get_object_name [get_pins -of_objects \
@@ -29,9 +51,6 @@ foreach pin_name $memory_pin_name_list {
     set_ccopt_property insertion_delay 0.1 -pin $pin_name
 }
 
-
-# unit: ns
-set_ccopt_property target_skew 0.1
 
 
 # 22版本

@@ -9,7 +9,9 @@ set ROOT [file normalize [file join [file dirname [info script]] ../..]]
 
 
 set T22 "/data/data_dell/PDK_Tech/TSMC_22NM_RF_ULL"
-set streamOut_map "${T22}/PDK/PDK_0.8V_2.5V_1P9M_6X1Z1U_UT_ALRDL_StarRC_QRC/streamOut.map"
+# set streamOut_map "${T22}/PDK/PDK_0.8V_2.5V_1P9M_6X1Z1U_UT_ALRDL_StarRC_QRC/streamOut.map"
+# TODO: 重新选streamOut_map
+set streamOut_map "${T22}/Doc/CL-PR/PRTF_Innovus_22nm_001_Cad_V11_1a/PR_tech/Cadence/GdsOutMap/PRTF_Innovus_22nm_9M_6X1Z1U.11_1a.map"
 
 # ----------------------------------------------------------
 # 1. Set the LEF File

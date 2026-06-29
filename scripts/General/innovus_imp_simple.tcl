@@ -6,8 +6,8 @@
 
 #----------Step 0: Initialize----------#
 # 如果用makefile启动的话，已经自动执行了，可以跳过
-source ../scripts/Step0_Init/init_config.tcl
-source ../scripts/Step0_Init/mmmc.tcl
+#source ../scripts/Step0_Init/init_config.tcl
+#source ../scripts/Step0_Init/mmmc.tcl
 
 #----------Step 1: FloorPlan-----------#
 source ../scripts/Step1_FloorPlan/floorplan.tcl
@@ -26,6 +26,7 @@ source ../scripts/Step2_PowerPlan/power_stripe.tcl
 # 如果sram bank之间的channel已经有了stripe，则这一步可以跳过
 source ../scripts/Step2_PowerPlan/power_stripe_ver_comple.tcl
 
+
 source ../scripts/Step2_PowerPlan/power_check.tcl
 
 saveDesign ../backup/${TopName}_postPowerplan.enc
@@ -43,7 +44,7 @@ source ../scripts/Step3_Placement/place_incr.tcl
 #----------Step 4: CTS-----------------#
 source ../scripts/Step4_Clock_Tree_Syn/cts.tcl
 
-source ../scripts/Step4_Clock_Tree_Syn/cts_opt.tcl
+#source ../scripts/Step4_Clock_Tree_Syn/cts_opt.tcl
 
 # 检查sram bank的clka和clkb的skew，要小于50ps
 source ../scripts/Step4_Clock_Tree_Syn/check_skew.tcl
@@ -55,19 +56,19 @@ source ../scripts/Step5_Routing/route.tcl
 source ../scripts/Step5_Routing/optDesign_postRoute.tcl
 
 # 修DRC之前先配置好ECO模式
-source ../scripts/Step5_Routing/ecoRoute_config.tcl
+#source ../scripts/Step5_Routing/ecoRoute_config.tcl
 
 # 不要执行这个脚本！
 # 打开脚本查看命令，手动执行
-source ../scripts/Step5_Routing/fixDrc.tcl
+#source ../scripts/Step5_Routing/fixDrc.tcl
 
 
 #----------Step 6: Signoff-------------#
 source ../scripts/Step6_SIgnoff/addFiller.tcl
-source ../scripts/Step6_SIgnoff/PG_pin.tcl
+#source ../scripts/Step6_SIgnoff/PG_pin.tcl
 source ../scripts/Step6_SIgnoff/file_gen.tcl
 
 
-source ../scripts/Step6_SIgnoff/netlist2cdl.tcl
+#source ../scripts/Step6_SIgnoff/netlist2cdl.tcl
 
 saveDesign ../backup/${TopName}_postSignoff.enc

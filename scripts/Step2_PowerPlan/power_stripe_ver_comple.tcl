@@ -67,8 +67,8 @@ proc add_mxu_vstripe_group_at_x {x_center y_min y_max} {
         -block_ring_top_layer_limit    M7 \
         -padcore_ring_bottom_layer_limit M1 \
         -padcore_ring_top_layer_limit    M7 \
-		-create_pins 1 \
-		-extend_to design_boundary
+		-create_pins 1 
+		# -extend_to design_boundary
 }
 
 

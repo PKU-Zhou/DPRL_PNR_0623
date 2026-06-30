@@ -47,6 +47,8 @@ foreach redundant_file $redundant_files {
 }
 
 
+# rcOut -rc_corner rc_typical -spef ../backup/signoff/${TopName}_postSignoff_func_tt_typ.spef
+
 
 
 

@@ -6,7 +6,7 @@
 #  Set the V2LVS  converting option
 # ----------------------------------------------------------
 set v2lvs_option "\
-        -s ${T22}/PDK/PDK_20211230_LO_0.8V_2.5V_1P9M_6X1Z1U_UT_ALRDL_StarRC_QRC/Calibre/lvs/source.added \
+        -s ${T22}/PDK/PDK_0.8V_2.5V_1P9M_6X1Z1U_UT_ALRDL_StarRC_QRC/Calibre/lvs/source.added \
         -s ${T22}/IP/Std_Cell/tcbn22ullbwp7t30p140_110b/digital/Back_End/spice/tcbn22ullbwp7t30p140_110a/tcbn22ullbwp7t30p140_110a.spi \
         -s ${T22}/IP/Std_Cell/tcbn22ullbwp7t30p140lvt_110b/digital/Back_End/spice/tcbn22ullbwp7t30p140lvt_110a/tcbn22ullbwp7t30p140lvt_110a.spi \
         -s ${T22}/IP/Std_Cell/tcbn22ullbwp7t30p140hvt_110b/digital/Back_End/spice/tcbn22ullbwp7t30p140hvt_110a/tcbn22ullbwp7t30p140hvt_110a.spi \

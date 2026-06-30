@@ -19,7 +19,7 @@ addStripe   -nets                               { VDD_MXU VSS_MXU } \
 			-width                              1.9 \
 			-spacing                            0.6 \
 			-set_to_set_distance                18.75 \
-			-start_offset                       9.4 \
+			-start_offset                       3 \
 			-block_ring_bottom_layer_limit      M1 \
 			-block_ring_top_layer_limit         M7 \
 			-padcore_ring_bottom_layer_limit    M1 \

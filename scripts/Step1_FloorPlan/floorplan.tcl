@@ -6,7 +6,7 @@
 puts "--> 1.1 Floorplan Start."
 
 # 默认单位是 um
-set core_sizex 1270
+set core_sizex 1500
 set core_sizey 2200
 
 # 四个边距的顺序是Left Bottom Right Top（左、下、右、上）

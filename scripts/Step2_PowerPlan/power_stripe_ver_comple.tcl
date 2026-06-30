@@ -87,7 +87,7 @@ proc add_mxu_vstripe_group_at_x {x_center y_min y_max} {
 
 
 # 在已经打好的stripe的基础上，为sram channel补充stripe，保障供电
-set SRAM_GAP_X_LIST {1057 1131 1206}
+set SRAM_GAP_X_LIST {75 150 226}
 set SRAM_Y_MIN 0
 set SRAM_Y_MAX [expr $core_sizey + 20]
 

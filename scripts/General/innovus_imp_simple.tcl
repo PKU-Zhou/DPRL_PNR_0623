@@ -49,6 +49,8 @@ source ../scripts/Step4_Clock_Tree_Syn/cts.tcl
 # 检查sram bank的clka和clkb的skew，要小于50ps
 source ../scripts/Step4_Clock_Tree_Syn/check_skew.tcl
 
+
+
 #----------Step 5: Route---------------#
 source ../scripts/Step5_Routing/route.tcl  
 

@@ -11,7 +11,7 @@
 
 
 # 开始之前，先看一眼DRC报告
-verify_drc -limit 99999 -report ./report/Route/verify_drc.rpt
+verify_drc -limit 99999 -report ../report/postRoute/verify_drc.rpt
 
 
 # 这个阶段时序以PT为准 不看Innovus的报告了

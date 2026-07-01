@@ -1,0 +1,25 @@
+//  Runset file generated on Wed Jul 1 11:00:26 2026
+//  by Calibre Interactive v2023.2_16.9    Tue Apr 4 17:40:47 PDT 2023
+//
+//      *** PLEASE DO NOT MODIFY THIS FILE ***
+//
+//
+
+drc.rulesFile.value = "/data/home/zch_zhou28/workspace/work2026_5/DPRL_PNR_0629/layout/rule/calibre_IP.drc"
+drc.runDir.value = "/data/home/zch_zhou28/workspace/work2026_5/DPRL_PNR_0629/layout/workspace/drc"
+drc.layout.exportFromLayoutViewer.value = false
+drc.layout.layoutFile.value = "/data/home/zch_zhou28/workspace/work2026_5/DPRL_PNR_0629/backup/signoff/mxu_top_with_DM_DODPO.gds2"
+cmn.layout.defFiles.value = [ "mxu_top_with_DM_DODPO.def" ]
+drc.layout.topCellLibrary.value = "mxu_top_with_dm_dodpo"
+cmn.layout.topCellLibraryFDI.value = "mxu_top_with_dm_dodpo"
+drc.layout.topCell.value = "mxu_top_with_DM_DODPO"
+drc.layout.topCellView.value = "layout"
+cmn.layout.topCellViewFDI.value = "layout"
+drc.drcdb.resultsFile.value = "mxu_top_with_DM_DODPO.drc.results"
+drc.reports.drcSummaryReport.value = "mxu_top_with_DM_DODPO.drc.summary"
+drc.rhdb.fileName.value = "mxu_top_with_DM_DODPO.rhdb"
+drc.dfmDefaults.resultsFile.value = "mxu_top_with_DM_DODPO.dfmDefaults.db"
+
+cmn.turboCommand.runHow.value = "multi"
+cmn.turboCommand.numProcessors.value = 32
+cmn.turboCommand.numLithoProcessors.value = 32

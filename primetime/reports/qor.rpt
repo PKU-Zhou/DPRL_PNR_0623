@@ -1,0 +1,73 @@
+****************************************
+Report : qor
+Design : mxu_top
+Version: V-2023.12
+Date   : Wed Jul  1 14:22:38 2026
+****************************************
+
+  Timing Path Group 'SYS_CLK' (max_delay/setup)
+  ---------------------------------------------
+  Levels of Logic:                           43
+  Critical Path Length:                    2.29
+  Critical Path Slack:                    -0.06
+  Total Negative Slack:                   -8.23
+  No. of Violating Paths:                   579
+  ---------------------------------------------
+
+  Timing Path Group 'V_SYS_CLK' (max_delay/setup)
+  ---------------------------------------------
+  Levels of Logic:                           15
+  Critical Path Length:                    0.88
+  Critical Path Slack:                    -0.03
+  Total Negative Slack:                   -0.43
+  No. of Violating Paths:                    63
+  ---------------------------------------------
+
+  Timing Path Group 'SYS_CLK' (min_delay/hold)
+  ---------------------------------------------
+  Levels of Logic:                           10
+  Critical Path Length:                    0.31
+  Critical Path Slack:                     0.36
+  Total Negative Slack:                    0.00
+  No. of Violating Paths:                     0
+  ---------------------------------------------
+
+  Timing Path Group 'V_SYS_CLK' (min_delay/hold)
+  ---------------------------------------------
+  Levels of Logic:                           12
+  Critical Path Length:                    0.80
+  Critical Path Slack:                     1.73
+  Total Negative Slack:                    0.00
+  No. of Violating Paths:                     0
+  ---------------------------------------------
+
+  Area
+  ---------------------------------------------
+  Net Interconnect area:                   0.00
+  Total cell area:                   1926547.75
+  Design Area:                       1926547.75
+  ---------------------------------------------
+
+
+  Cell & Pin Count
+  ---------------------------------------------
+  Pin Count:                            7684150
+  Hierarchical Cell Count:               100441
+  Hierarchical Port Count:              2533156
+  Leaf Cell Count:                      2090582
+  ---------------------------------------------
+
+
+  Design Rule Violations
+  ---------------------------------------------
+  Total No. of Pins in Design:          7684150
+  min_capacitance Count:                   5276
+  max_fanout Count:                       13666
+  max_transition Count:                     124
+  min_capacitance Cost:                    0.69
+  max_fanout Cost:                    378196.00
+  max_transition Cost:                     0.33
+  Total DRC Cost:                     378197.00
+  ---------------------------------------------
+
+1

@@ -1,0 +1,40 @@
+1.  wgt_buf_cen[0] (driver: <none>)
+2.  u_mxu_ctrl/semi_write_group[0] (driver: <none>)
+3.  u_mxu_ctrl/semi_write_group[1] (driver: <none>)
+4.  u_mxu_ctrl/semi_write_intra_row[0] (driver: <none>)
+5.  u_mxu_ctrl/semi_write_intra_row[1] (driver: <none>)
+6.  u_mxu_top_no_ctrl/semi_transposer_upper_valid_o (driver: <none>)
+7.  u_mxu_top_no_ctrl/sa_lane_gen_1__u_sa_top/decoder_gen_10__u_acc_encoder/u_barrel_shifter/n232 (driver: <none>)
+8.  u_mxu_top_no_ctrl/sa_lane_gen_1__u_sa_top/decoder_gen_10__u_acc_encoder/u_barrel_shifter/n233 (driver: <none>)
+9.  u_mxu_top_no_ctrl/sa_lane_gen_1__u_sa_top/decoder_gen_10__u_acc_encoder/u_barrel_shifter/n234 (driver: <none>)
+10.  u_mxu_top_no_ctrl/sa_lane_gen_1__u_sa_top/decoder_gen_10__u_acc_encoder/u_barrel_shifter/n238 (driver: <none>)
+..... suppressed 132762 additional unannotated nets.
+
+****************************************
+Report : annotated_parasitics
+	-check
+	-internal_nets
+	-boundary_nets
+	-list_not_annotated
+	-max_nets 10
+Design : mxu_top
+Version: V-2023.12
+Date   : Wed Jul  1 14:22:49 2026
+****************************************
+
+                    |         |         |         |   RC    |   Not   |
+Net Type            |  Total  | Lumped  |  RC pi  | network |Annotated|
+--------------------+---------+---------+---------+---------+---------+
+Internal nets       |         |         |         |         |         |
+  - Pin to pin nets | 2204611 |       0 |       0 | 2204611 |       0 |
+  - Driverless nets |  127496 |       0 |       0 |       0 |  127496 |
+  - Loadless nets   |    5120 |       0 |       0 |       0 |    5120 |
+--------------------+---------+---------+---------+---------+---------+
+Boundary/port nets  |         |         |         |         |         |
+  - Pin to pin nets |     474 |       0 |       0 |     474 |       0 |
+  - Driverless nets |       0 |       0 |       0 |       0 |       0 |
+  - Loadless nets   |     156 |       0 |       0 |       0 |     156 |
+--------------------+---------+---------+---------+---------+---------+
+                    | 2337857 |       0 |       0 | 2205085 |  132772 |
+
+1

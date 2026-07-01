@@ -1,0 +1,9 @@
+mxu_top 1000
+GEN_TCD_TCDDMY_FDM4_addr
+1 1 1 Jul  1 10:08:11 2026                     
+Rule File Pathname: Dummy_BEOL_Calibre_22nm_001.13a
+p 1 4
+1478555 1489260
+1482555 1489260
+1482555 1493260
+1478555 1493260

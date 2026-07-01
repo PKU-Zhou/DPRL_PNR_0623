@@ -1,0 +1,28 @@
+#!/bin/csh -f
+
+#set deck=Dummy_OD_PO_Metal_Calibre_65nm.25a
+#generate dummy metal & dummy odpo gds
+calibre -hyper -turbo -hier -drc Dummy_FEOL_Calibre_22nm_001.13a |tee run.log
+calibre -hyper -turbo -hier -drc Dummy_BEOL_Calibre_22nm_001.13a |tee run.log
+calibre -hyper -turbo -hier -drc Dummy_FEOL_Calibre_22nm_001_zzc2.13a |tee run.log
+
+#merge gds
+#b calibredrv -shell
+#layout filemerge -in A.gds -indir gdsdir/ -out TOP.gds
+
+#b calibredrv -a layout filemerge -in file1.gds -in file2.gds -rename -createtop new_top -out out.gds
+
+calibredrv -a layout filemerge \
+           -in ../../backup/signoff/mxu_top_postSignoff.gds2 \
+           -in ../../backup/signoff/DM.gds \
+           -in ../../backup/signoff/DODPO.gds \
+           -rename \
+           -createtop mxu_top_with_DM_DODPO \
+           -out ../../backup/signoff/mxu_top_with_DM_DODPO.gds2
+
+calibredrv -a layout filemerge \
+           -in ../../backup/signoff/mxu_top_with_DM_DODPO.gds2 \
+           -in ../../backup/signoff/DODPO_2.gds \
+           -rename \
+           -createtop mxu_top_with_DM_DODPO_2 \
+           -out ../../backup/signoff/mxu_top_with_DM_DODPO_2.gds2

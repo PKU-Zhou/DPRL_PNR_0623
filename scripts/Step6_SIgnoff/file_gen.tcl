@@ -47,7 +47,6 @@ foreach redundant_file $redundant_files {
 }
 
 
-# rcOut -rc_corner rc_typical -spef ../backup/signoff/${TopName}_postSignoff_func_tt_typ.spef
 
 
 
@@ -137,3 +136,7 @@ saveNetlist -excludeCellInst    ${lvs_exclude_cells} \
 timeDesign -outDir ../report/postSignoff -postRoute 
 timeDesign -outDir ../report/postSignoff -postRoute -hold 
 exec ../scripts/General/extract_report.csh ../report/postSignoff
+
+saveDesign ../backup/${TopName}_postSignoff.enc
+
+

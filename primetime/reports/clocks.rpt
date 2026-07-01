@@ -1,0 +1,44 @@
+****************************************
+Report : clock_skew
+Design : mxu_top
+Version: V-2023.12
+Date   : Wed Jul  1 14:22:48 2026
+****************************************
+
+              Min Rise  Min Fall  Max Rise  Max Fall     Hold          Setup        Related
+Object          Delay     Delay     Delay     Delay   Uncertainty   Uncertainty      Clock
+-----------------------------------------------------------------------------------------------
+SYS_CLK             -         -         -         -      0.07          0.15           -- 
+V_SYS_CLK        0.00      0.00      0.00      0.00      0.07          0.15           -- 
+
+                Min Condition Source Latency      Max Condition Source Latency
+------------------------------------------------------------------------------------------
+Object        Early_r Early_f  Late_r  Late_f   Early_r Early_f  Late_r  Late_f  Rel_clk
+------------------------------------------------------------------------------------------
+clk_i               -       -       -       -     -0.44   -0.44   -0.44   -0.44
+                                                                               SYS_CLK
+
+              Min Rise  Min Fall  Max Rise  Max Fall
+Object          Transition   Transition   Transition   Transition
+--------------------------------------------------------------------------------
+SYS_CLK          0.10      0.10      0.10      0.10
+V_SYS_CLK        0.10      0.10      0.10      0.10
+
+****************************************
+Report : clock
+Design : mxu_top
+Version: V-2023.12
+Date   : Wed Jul  1 14:22:48 2026
+****************************************
+
+Attributes:
+    p - Propagated clock
+    G - Generated  clock
+    I - Inactive   clock
+
+Clock             Period          Waveform            Attrs     Sources
+-----------------------------------------------------------------------
+SYS_CLK             2.00          {0 1}               p         {clk_i}
+V_SYS_CLK           2.00          {0 1}                         {}
+
+1

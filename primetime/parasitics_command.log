@@ -1,0 +1,20 @@
+Information: Derived library resistance unit is 1.000000 Kohm (Time unit is 1 ns, and Capacitance unit is 1.000000 pF). (DES-028)
+
+
+****************************************
+Report : read_parasitics /data/home/zch_zhou28/workspace/work2026_5/DPRL_PNR_0629/backup/signoff/mxu_top_postSignoff_rc_typ.spef
+Design : mxu_top
+Version: V-2023.12
+Date   : Wed Jul  1 14:20:36 2026
+****************************************
+
+        0 error(s)
+        Format is SPEF
+        Annotated nets                   :      2205085
+        Annotated capacitances           :     16422061
+        Annotated resistances            :     14216989
+        Reduced coupling capacitances    :      2564280
+        Annotated PI models              :            0
+        Annotated Elmore delays          :            0
+
+

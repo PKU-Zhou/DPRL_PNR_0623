@@ -1,0 +1,56 @@
+//  Runset file generated on Wed Jul 1 13:22:27 2026
+//  by Calibre Interactive v2023.2_16.9    Tue Apr 4 17:40:47 PDT 2023
+//
+//      *** PLEASE DO NOT MODIFY THIS FILE ***
+//
+//
+
+cmn.showOptionPages.value = [ "Options" ]
+lvs.rulesFile.value = "/data/home/zch_zhou28/workspace/work2026_5/DPRL_PNR_0629/layout/rule/calibre.lvs"
+lvs.runDir.value = "/data/home/zch_zhou28/workspace/work2026_5/DPRL_PNR_0629/layout/workspace/lvs"
+lvs.layout.exportFromLayoutViewer.value = false
+lvs.layout.layoutFile.value = "/data/home/zch_zhou28/workspace/work2026_5/DPRL_PNR_0629/backup/signoff/mxu_top_with_DM_DODPO.gds2"
+cmn.layout.defFiles.value = [ "mxu_top_with_DM_DODPO.def" ]
+lvs.layout.topCellLibrary.value = "mxu_top_with_dm_dodpo"
+cmn.layout.topCellLibraryFDI.value = "mxu_top_with_dm_dodpo"
+lvs.layout.topCell.value = "mxu_top_with_DM_DODPO"
+lvs.layout.topCellView.value = "layout"
+cmn.layout.topCellViewFDI.value = "layout"
+lvs.layout.layoutNetlist.value = "mxu_top_with_DM_DODPO.sp"
+lvs.source2.sourceFile.value = "mxu_top_with_DM_DODPO.sp"
+lvs.source2.topCellLibrary.value = "mxu_top_with_dm_dodpo"
+lvs.source2.topCellLibraryFDI.value = "mxu_top_with_dm_dodpo"
+lvs.source2.topCell.value = "mxu_top_with_DM_DODPO"
+lvs.source2.topCellFDI.value = "mxu_top_with_DM_DODPO"
+lvs.source.exportFromSourceViewer.value = false
+lvs.source.sourceFile.value = "/data/home/zch_zhou28/workspace/work2026_5/DPRL_PNR_0629/backup/signoff/mxu_top.cdl"
+lvs.source.topCellLibrary.value = "mxu_top_with_dm_dodpo"
+lvs.source.topCellLibraryFDI.value = "mxu_top_with_dm_dodpo"
+lvs.source.topCell.value = "mxu_top"
+lvs.source.topCellFDI.value = "mxu_top_with_DM_DODPO"
+lvs.hCells.hCellsFile.value = "/data/home/zch_zhou28/workspace/work2026_5/DPRL_PNR_0629/backup/signoff/hcell.list"
+lvs.hCells.hCellsFile.specified = true
+lvs.reports.lvsReport.value = "mxu_top_with_DM_DODPO.lvs.report"
+lvs.layoutCase.caseSensitive.value = "YES"
+lvs.layoutCase.caseSensitive.specified = true
+lvs.sourceCase.caseSensitive.value = "YES"
+lvs.sourceCase.caseSensitive.specified = true
+lvs.supply.powerNames.value = [ "VDD_MXU" ]
+lvs.supply.powerNames.specified = true
+lvs.supply.groundNames.value = [ "VSS_MXU" ]
+lvs.supply.groundNames.specified = true
+lvs.lvsReduceGates.splitGates.specified = true
+lvs.lvsReduceGates.reduceParallelMOS.specified = true
+lvs.lvsFilterUnusedOption.specified = true
+lvs.lvsFilterUnusedOption.opt_q.specified = true
+cmn.virtualConnect.colon.value = "YES"
+cmn.virtualConnect.colon.specified = true
+lvs.lvsBox.parameters = [
+    [ false, ""]
+]
+lvs.svrfIncludes.statementType.value = "SVRF"
+lvs.ercdb.resultsFile.value = "mxu_top_with_DM_DODPO.erc.results"
+lvs.ercSummaryReport.report.value = "mxu_top_with_DM_DODPO.erc.summary"
+
+cmn.turboCommand.runHow.value = "multi"
+cmn.turboCommand.numProcessors.value = 32

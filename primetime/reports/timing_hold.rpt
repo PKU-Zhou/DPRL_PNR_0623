@@ -1,0 +1,19 @@
+****************************************
+Report : timing
+	-path_type full
+	-delay_type min
+	-input_pins
+	-nets
+	-slack_lesser_than 0.00
+	-max_paths 50
+	-transition_time
+	-capacitance
+	-sort_by slack
+Design : mxu_top
+Version: V-2023.12
+Date   : Wed Jul  1 14:22:38 2026
+****************************************
+
+No paths with slack less than 0.00.
+
+1
